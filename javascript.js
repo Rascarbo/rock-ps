@@ -13,7 +13,7 @@ function getComputerChoice(){
 
 //function to get the player choice
 //Ask the player rock, paper or scissors
-//Check and store player input
+//Get player input
 function getHumanChoice(){
-
+    return prompt("Rock, Paper or Scissors?")
 }
