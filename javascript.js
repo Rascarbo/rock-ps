@@ -17,3 +17,8 @@ function getComputerChoice(){
 function getHumanChoice(){
     return prompt("Rock, Paper or Scissors?")
 }
+
+//Initialize human and computer scores
+//into two variables
+let humanScore = 0;
+let computerScore = 0;
