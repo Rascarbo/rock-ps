@@ -10,4 +10,10 @@ function getComputerChoice(){
             return "Scissors";
     }
 }
-console.log(getComputerChoice())
+
+//function to get the player choice
+//Ask the player rock, paper or scissors
+//Check and store player input
+function getHumanChoice(){
+
+}
