@@ -11,14 +11,23 @@ function getComputerChoice(){
     }
 }
 
-//function to get the player choice
 //Ask the player rock, paper or scissors
 //Get player input
 function getHumanChoice(){
-    return prompt("Rock, Paper or Scissors?")
+    let humanChoice = prompt("Rock, Paper or Scissors?");
+    humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
 }
 
 //Initialize human and computer scores
 //into two variables
 let humanScore = 0;
 let computerScore = 0;
+
+//Start by getting human and computer choice
+//Compare the two answers
+//Output results
+//Add points to the winner
+function playRound(humanChoice, computerChoice){
+
+}
+
