@@ -25,6 +25,7 @@ function playGame(){
 
     let humanScore = 0;
     let computerScore = 0;
+    let counter = 1;
 
     //Start by getting human and computer choice
     //Compare the two answers
@@ -73,17 +74,21 @@ function playGame(){
 
         console.log("Human "+humanScore+" "+"Machine "+computerScore);
 
-        if (humanScore+computerScore!==5){
+        if (counter<5){
+            counter++;
+            console.log(counter);
             playRound(getHumanChoice(),  getComputerChoice());
         } else{
             if(humanScore<computerScore){
                 console.log("The computer Wins !");
-            } else{
+            } else if(humanScore>computerScore){
                 console.log("You Win !");
-            }
+            } else{
+                console.log("Draw ! The End !");
+            }        
         }
     }
-    
+
     playRound(getHumanChoice(),  getComputerChoice());
     
 }
