@@ -70,18 +70,22 @@ function playGame(){
         } else{
             console.log("Wrong input, try again!");
         }
+
         console.log("Human "+humanScore+" "+"Machine "+computerScore);
-    }
- 
-    if (humanScore+computerScore!==5){
-        playRound(getHumanChoice(),  getComputerChoice());
-    } else{
-        if(humanScore<computerScore){
-            console.log("The computer Wins !");
+
+        if (humanScore+computerScore!==5){
+            playRound(getHumanChoice(),  getComputerChoice());
         } else{
-            console.log("You Win !");
+            if(humanScore<computerScore){
+                console.log("The computer Wins !");
+            } else{
+                console.log("You Win !");
+            }
         }
     }
+    
+    playRound(getHumanChoice(),  getComputerChoice());
+    
 }
 
 playGame();
