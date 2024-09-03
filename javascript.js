@@ -19,59 +19,60 @@ function getHumanChoice(){
     return humanChoice;
 }
 
-//Initialize human and computer scores
-//into two variables
-let humanScore = 0;
-let computerScore = 0;
+function playGame(){
+    //Initialize human and computer scores
+    //into two variables
 
-//Start by getting human and computer choice
-//Compare the two answers
-//Output results
-//Add points to the winner
-function playRound(humanChoice, computerChoice){
-    if (humanChoice == computerChoice){
-            console.log("Draw!");
-    } else if((humanChoice === "Rock" || computerChoice === "Rock") && (humanChoice === "Paper" || computerChoice === "Paper")){
-        switch ("Paper"){
-            case humanChoice:
-                console.log("You win, Paper beats Rock!");
-                humanScore++;
-                break;
-            case computerChoice:
-                console.log("You lose, Paper beats Rock!")
-                computerScore++;
-                break;
+    let humanScore = 0;
+    let computerScore = 0;
+
+    //Start by getting human and computer choice
+    //Compare the two answers
+    //Output results
+    //Add points to the winner
+    
+    function playRound(humanChoice, computerChoice){
+        if (humanChoice == computerChoice){
+                console.log("Draw!");
+        } else if((humanChoice === "Rock" || computerChoice === "Rock") && (humanChoice === "Paper" || computerChoice === "Paper")){
+            switch ("Paper"){
+                case humanChoice:
+                    console.log("You win, Paper beats Rock!");
+                    humanScore++;
+                    break;
+                case computerChoice:
+                    console.log("You lose, Paper beats Rock!")
+                    computerScore++;
+                    break;
+            }
+        } else if((humanChoice === "Rock" || computerChoice === "Rock") && (humanChoice === "Scissors" || computerChoice === "Scissors")){
+            switch ("Rock"){
+                case humanChoice:
+                    console.log("You win, Rock beats Scissors!");
+                    humanScore++;
+                    break;
+                case computerChoice:
+                    console.log("You lose, Rock beats Scissors!");
+                    computerScore++;
+                    break;
+            }
+        } else if ((humanChoice === "Paper" || computerChoice === "Paper") && (humanChoice === "Scissors" || computerChoice === "Scissors")){
+            switch ("Scissors"){
+                case humanChoice:
+                    console.log("You win, Scissors beats Paper!");
+                    humanScore++;
+                    break;
+                case computerChoice:
+                    console.log("You lose, Scissors beats Paper!");
+                    computerScore++;
+                    break;
+            }
+        } else{
+            console.log("Wrong input, try again!");
         }
-    } else if((humanChoice === "Rock" || computerChoice === "Rock") && (humanChoice === "Scissors" || computerChoice === "Scissors")){
-        switch ("Rock"){
-            case humanChoice:
-                console.log("You win, Rock beats Scissors!");
-                humanScore++;
-                break;
-            case computerChoice:
-                console.log("You lose, Rock beats Scissors!");
-                computerScore++;
-                break;
-        }
-    } else if ((humanChoice === "Paper" || computerChoice === "Paper") && (humanChoice === "Scissors" || computerChoice === "Scissors")){
-        switch ("Scissors"){
-            case humanChoice:
-                console.log("You win, Scissors beats Paper!");
-                humanScore++;
-                break;
-            case computerChoice:
-                console.log("You lose, Scissors beats Paper!");
-                computerScore++;
-                break;
-        }
-    } else{
-        console.log("Wrong input, try again!");
+        console.log("Human "+humanScore+" "+"Machine "+computerScore);
     }
-    console.log(computerChoice);
-    console.log(humanChoice);
-    console.log("Human "+humanScore+" "+"Machine "+computerScore);
 }
-
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 console.log(computerSelection);
