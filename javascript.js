@@ -30,7 +30,7 @@ function playGame(){
     //Compare the two answers
     //Output results
     //Add points to the winner
-    
+
     function playRound(humanChoice, computerChoice){
         if (humanChoice == computerChoice){
                 console.log("Draw!");
@@ -72,10 +72,20 @@ function playGame(){
         }
         console.log("Human "+humanScore+" "+"Machine "+computerScore);
     }
+ 
+    if (humanScore+computerScore!==5){
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+        console.log(computerSelection);
+        console.log(humanSelection);
+    } else{
+        if(humanScore<computerScore){
+            console.log("The computer Wins !");
+        } else{
+            console.log("You Win !");
+        }
+    }
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-console.log(computerSelection);
-console.log(humanSelection);
 
-playRound(humanSelection, computerSelection);
+playGame();
