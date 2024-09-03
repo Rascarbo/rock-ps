@@ -74,11 +74,7 @@ function playGame(){
     }
  
     if (humanScore+computerScore!==5){
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-        console.log(computerSelection);
-        console.log(humanSelection);
+        playRound(getHumanChoice(),  getComputerChoice());
     } else{
         if(humanScore<computerScore){
             console.log("The computer Wins !");
